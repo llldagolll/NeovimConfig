@@ -29,7 +29,6 @@ let g:user_emmet_settings = {
 \}
 \}
 let g:user_emmet_leader_key='<c-z>'
-
 '''
 
 
@@ -106,3 +105,11 @@ source ./plugins/indent.rc.vim
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+hook_add = """
+source ~/.config/nvim/userconfig/plugins/coc.rc.vim
+"""

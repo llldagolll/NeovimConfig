@@ -1,14 +1,9 @@
 {
-"python.jediEnabled": false,
-"eslint.autoFixOnSave": [
-  "javascript",
-  "javascriptreact",
-  "typescript",
-  "typescriptreact",
-  "vue"
-],
+  "tsserver.npm": "/usr/local/bin/npm"
 "jedi": {
     "enable": true,
     "startupMessage": false,
     "executable.command":"jedi-language-server"
+},
+"python.jediEnabled": false
 }

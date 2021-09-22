@@ -18,16 +18,6 @@ on_ft=['python']
 
 
 
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-on_ft = ['python', 'javascript', 'javascriptreact']
-merged=0
-rev='release'
-hook_source='''
-source ~/.config/nvim/userconfig/plugins/coc.rc.vim
-'''
-
-
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -53,7 +43,6 @@ set splitbelow
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
-on_ft=['python', 'javascript', 'javascript.jsx']
 
 
 
@@ -69,3 +58,4 @@ let g:sonictemplate_vim_template_dir = [
       \ '~/.config/nvim/userconfig/template'
       \]
 '''
+
