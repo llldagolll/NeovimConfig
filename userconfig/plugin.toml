@@ -1,0 +1,108 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build='make'
+
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+let g:user_emmet_settings = {
+\ 'variables' : {
+\ 'lang' : "ja"
+\ },
+\ 'html' : {
+\   'indentation' : ' ',
+\   'snippets' : {
+\    'html:5':"<!DOCTYPE html>\n"
+\      ."<html lang=\"${lang}\>\n"
+\      ."<head>\n"
+\      ."\t<meta charset=\"${charset}\">\n"
+\      ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\>\n"
+\      ."\t<title></title>\n"
+\      ."</head>\n"
+\      ."<body>\n\t${child}|\n</body>\n"
+\      ."</html>",
+\}
+\}
+\}
+let g:user_emmet_leader_key='<c-z>'
+
+'''
+
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+
+
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+
+
+
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add ='''
+let g:ale_linters = {
+\       'python':['flake8'],
+\ }
+let g:ale_fixers = {
+\       '*': ['remove_trailing_lines', 'trim_whitespace'],
+\       'python': ['black','isort'],
+\ }
+let g:ale_fix_on_save = 1
+let g:ale_sign_column_always=1
+let g:lightline = {
+  \'active': {
+  \  'left': [
+  \    ['mode', 'paste'],
+  \    ['readonly', 'filename', 'modified', 'ale'],
+  \  ]
+  \},
+  \'component_function': {
+  \  'ale': 'ALEGetStatusLine'
+  \}
+\ }
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+'''
+
+
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_source ='''
+source ./plugins/fugitive.rc.vim
+'''
+
+
+
+[[plugins]]
+repo = 'vim-airline/vim-airline.git'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes.git'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo='Yggdroot/indentLine'
+hook_source='''
+source ./plugins/indent.rc.vim
+'''
+
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
