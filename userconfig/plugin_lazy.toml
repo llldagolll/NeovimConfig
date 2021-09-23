@@ -41,8 +41,7 @@ set splitbelow
 
 '''
 
-[[plugins]]
-repo = 'tpope/vim-commentary'
+
 
 
 
@@ -59,3 +58,11 @@ let g:sonictemplate_vim_template_dir = [
       \]
 '''
 
+[[plugins]]
+repo = "neoclide/coc.nvim"
+on_ft=["python", "javascript", "javascriptreact"]
+merge = 0
+rev = "release"
+hook_add = """
+source ~/.config/nvim/userconfig/plugins/coc.rc.vim
+"""
