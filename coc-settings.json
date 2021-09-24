@@ -1,5 +1,17 @@
 {
-  "tsserver.npm": "/usr/local/bin/npm"
+  "tsserver.npm": "/usr/local/bin/npm",
+  "tsserver.formatOnType": false,
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.autoClosingTags": true,
+  "javascript.format.enabled": false,
+  "javascript.preferences.quoteStyle": false,
+  "javascript.format.insertSpaceAfterCommaDelimite": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatement": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+
+
 "jedi": {
     "enable": true,
     "startupMessage": false,
