@@ -5,6 +5,12 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/vimproc.vim'
 build='make'
 
+[[plugins]]
+repo ='Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -28,7 +34,7 @@ let g:user_emmet_settings = {
 \}
 \}
 \}
-let g:user_emmet_leader_key='<c-z>'
+let g:user_emmet_leader_key='<C-v>'
 '''
 
 
@@ -78,3 +84,11 @@ repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+
+
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+
+hook_add = '''
+let g:sonictemplate_vim_template_dir='~/.config/nvim/userconfig/template'
+  '''

@@ -10,12 +10,9 @@
   "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
   "javascript.format.insertSpaceAfterKeywordsInControlFlowStatement": false,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "html.filetypes": ["html","ejs, javascript, javascriptreact"],
 
 
-"jedi": {
-    "enable": true,
-    "startupMessage": false,
-    "executable.command":"jedi-language-server"
-},
+
 "python.jediEnabled": false
 }

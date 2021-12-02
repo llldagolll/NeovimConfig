@@ -3,6 +3,7 @@
 set encoding=UTF-8
 " バック␣の挙動を通常と同じにする
 set backspace=2
+set nobackup
 set noswapfile
 " 編集中のファイルが変更されたら自動で読み直す
 " set autoread
@@ -17,28 +18,34 @@ set nowrap
 "折り返し時に表示単位での移動ができるようにする
 nnoremap j gj
 nnoremap k gk
-nnoremap j k
-nnoremap k j
+" nnoremap j k
+" nnoremap k j
 
+" 分割系コマンドキーマップ
 nnoremap <C-h><C-h> <C-w>h
 nnoremap <C-l><C-l> <C-w>l
+nnoremap <C-j><C-j> <C-w>j
+nnoremap <C-k><C-k> <C-w>k
 
 
 set expandtab
-set tabstop=2 "画面上でタブ文字が占める幅
+set tabstop=4 "画面上でタブ文字が占める幅
 set shiftwidth=2 "自動インデントでずれる幅
-set softtabstop=2 "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set softtabstop=4 "連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 set autoindent "改行時に前の行のインデントを継続する
 set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 
 "ディレクトリツリーを表示
-map <C-b> :NERDTreeToggle<CR>
+map <C-a> :NERDTreeToggle<CR>
 
 " VIM起動時ファイルのほうにカーソルを移す
 function s:MoveToFileAtStart()
 	call feedkeys("\<C-w>\w")
 	call feedkeys("\l")
 endfunction
+
+"NERDTreeファイル移動時自動で閉じる
+let NERDTreeQuitOnOpen=1
 
 " 因数なしでvimを開いたらNERDTreeを起動、
 "引数ありならNERDTreeは起動せず、引数で渡されたファイルを開く。
@@ -73,6 +80,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <silent><F4> :only<CR>
 nnoremap <silent><F5> :QuickRun<CR>
 nnoremap <silent><leader>r :QuickRun<CR>
+nnoremap <Leader>q :<C-u>bw! \[quickrun\ output\]<CR>
 cab t tabe
 cab qr QuickRun
 
@@ -85,7 +93,8 @@ set number
 " カラースキームを設定
 " colorscheme ron
 " colorscheme molokai
-colorscheme lucius
+" colorscheme lucius
+colorscheme tender
 set statusline=2
 "
 " 行末の空白削除
@@ -110,6 +119,7 @@ set splitright
 " dein Scripts--------------------
 if &compatible
         set nocompatible        "Be iMproved
+nnoremap <Leader>f :noh<CR>
 endif
 
 " let s:dein_path = expand('C:\Users\owner\.cache\dein')
@@ -138,6 +148,9 @@ if dein#load_state(s:dein_path)
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
         call dein#add('Shougo/neco-vim')
+
+
+
 
         call dein#load_toml(s:toml, {'lazy': 0})
         call dein#load_toml(s:lazy_toml, {'lazy': 1})
