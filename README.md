@@ -1,9 +1,8 @@
 
-# eoVimの設定ファイル
+# NeoVimの設定ファイル
 
 ## 前提環境
 
-- ubuntu20.04
 - windowsのwsl(ubuntu20.04)
 
 ## ディレクトリ構造
