@@ -73,8 +73,12 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo='Yggdroot/indentLine'
-hook_source='''
-source ./plugins/indent.rc.vim
+hook_add = '''
+let g:indentLine_car_list = ['|', '¦', '┆', '┊']
+
+let g:indentLine_color_term = 111
+let g:indentLine_color_gui = '#708090'
+
 '''
 
 

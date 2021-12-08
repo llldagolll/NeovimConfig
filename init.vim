@@ -94,7 +94,8 @@ set number
 " colorscheme ron
 " colorscheme molokai
 " colorscheme lucius
-colorscheme tender
+" colorscheme tender
+colorscheme atom
 set statusline=2
 "
 " 行末の空白削除
